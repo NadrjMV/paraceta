@@ -33,6 +33,7 @@ body {
     position: relative;
 }
 
+/* CORREÇÃO GLOBAL: Remove todos os sublinhados de links */
 a {
     text-decoration: none !important;
     color: inherit;
@@ -136,11 +137,32 @@ main.container > section {
     gap: 2.5rem;
 }
 
-/* --- HERO SECTION (ESTILO CORRIGIDO) --- */
+/* --- BOTÃO (ESTILO CORRIGIDO) --- */
+.btn {
+    padding: 0.75rem 1.75rem;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: transform 0.2s, filter 0.2s;
+    border: none;
+    cursor: pointer;
+}
+.btn:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+}
+
+.btn-primary {
+    background-color: var(--neon-blue);
+    color: var(--text-light);
+    box-shadow: 0 0 20px rgba(0, 122, 255, 0.5);
+}
+
+/* --- HERO SECTION (ESPAÇAMENTO CORRIGIDO) --- */
 .hero {
     text-align: center;
-    padding-top: calc(var(--header-height) + 4rem);
-    padding-bottom: 4rem;
+    padding-top: calc(var(--header-height) + 2rem); /* Menos padding no topo */
+    padding-bottom: 2rem; /* Menos padding na base */
+    margin-bottom: 4rem; /* Menos margem para a próxima seção */
 }
 
 .hero-title-container {
@@ -149,7 +171,7 @@ main.container > section {
 
 .main-title {
     font-family: var(--font-display);
-    font-size: 6rem; /* Tamanho gigante para impacto */
+    font-size: 6rem;
     font-weight: 700;
     line-height: 1;
     letter-spacing: 2px;
