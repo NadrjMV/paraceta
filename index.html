@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ParacetaNight 9ª Edição - A Noite Mais Esperada do Ano</title>
+    <meta name="description" content="ParacetaNight 9ª Edição em Itajubá, MG. A noite mais esperada do ano está chegando. Garanta seu ingresso!">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/pXSbKLyy/469952497-1839488546880345-44872502468651088-n.jpg">
+
+    <!-- Google Fonts (Teko e Poppins) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Teko:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome (Ícones) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+    <!-- Nosso CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Nosso JavaScript -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Fundo com Lua Cheia -->
+    <div class="background-container">
+        <div class="moon"></div>
+    </div>
+
+    <!-- ==================== HEADER ==================== -->
+    <header id="header">
+        <nav class="container">
+            <a href="#" class="logo">
+                <img src="https://i.postimg.cc/pXSbKLyy/469952497-1839488546880345-44872502468651088-n.jpg" alt="Logo ParacetaNight">
+            </a>
+            <ul class="menu">
+                <li><a href="#home">Início</a></li>
+                <li><a href="#lineup">Atrações</a></li>
+                <li><a href="#ingressos">Ingressos</a></li>
+                <li><a href="#local">Local</a></li>
+            </ul>
+            <a href="https://linktr.ee/paracetamal" target="_blank" class="btn btn-primary">Comprar Ingresso</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <!-- ==================== HERO SECTION (TOTALMENTE REDESENHADA) ==================== -->
+        <section id="home" class="hero reveal">
+            <div class="hero-title-container">
+                <h1 class="main-title">PARACETANIGHT</h1>
+                <p class="edition-tag">9ª EDIÇÃO</p>
+            </div>
+            <h2 class="slogan">A noite mais esperada do ano!</h2>
+            
+            <!-- Countdown Timer -->
+            <div id="countdown" class="countdown-timer">
+                <div class="time-block">
+                    <span id="days">00</span>
+                    <p>Dias</p>
+                </div>
+                <div class="time-block">
+                    <span id="hours">00</span>
+                    <p>Horas</p>
+                </div>
+                <div class="time-block">
+                    <span id="minutes">00</span>
+                    <p>Minutos</p>
+                </div>
+                <div class="time-block">
+                    <span id="seconds">00</span>
+                    <p>Segundos</p>
+                </div>
+            </div>
+
+            <div class="event-info">
+                <span><i class="fa-solid fa-calendar-day"></i> 05 de Julho</span>
+                <span><i class="fa-solid fa-location-dot"></i> Itajubá-MG</span>
+            </div>
+        </section>
+
+        <!-- ==================== LINE-UP ==================== -->
+        <section id="lineup" class="section">
+            <h2 class="section-title reveal">Line-up de Peso</h2>
+            <div class="lineup-grid">
+                <!-- Artista 1 -->
+                <div class="artist-card glass-card reveal">
+                    <img src="https://yt3.googleusercontent.com/F94aaoSXF0-r9euwYNIX_dYLm9_0ligSqETqQTrsV6qnZ4DBZJlA11BCQgl23y9oLKvoNUsZMg=s900-c-k-c0x00ffffff-no-rj" alt="Foto do MC Caverinha">
+                    <h3>MC Caverinha</h3>
+                    <p>Trap / Funk</p>
+                </div>
+                <!-- Artista 2 -->
+                <div class="artist-card glass-card reveal">
+                    <img src="https://i.scdn.co/image/ab6761610000e5eb95aa9ff29c207fb3691b66bd" alt="Foto do DJ GBR">
+                    <h3>DJ GBR</h3>
+                    <p>Funk / Eletrônico</p>
+                </div>
+                <!-- Artista 3 -->
+                <div class="artist-card glass-card reveal">
+                    <img src="https://bahiaeconomica.com.br/wp/wp-content/uploads/2023/10/copia-de-Ricknelso.jpg" alt="Foto do MC Rick">
+                    <h3>MC Rick</h3>
+                    <p>Funk</p>
+                </div>
+                <!-- Artista 4 -->
+                <div class="artist-card glass-card reveal">
+                    <img src="https://i.postimg.cc/VsxVLzMx/496843273-17885500593268983-4097307867582007363-n.jpg" alt="Foto do Honey Mustard">
+                    <h3>Honey Mustard</h3>
+                    <p>Eletrônico</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== INGRESSOS ==================== -->
+        <section id="ingressos" class="section ingressos-wrapper glass-card reveal">
+            <div class="ingressos-text">
+                <h2>Garanta seu lugar na história.</h2>
+                <p>Os lotes são limitados e estão virando rápido. Não deixe para a última hora e compre seu ingresso no ponto de venda oficial.</p>
+                <a href="https://linktr.ee/paracetamal" target="_blank" class="btn btn-primary">Comprar Ingresso Agora <i class="fa-solid fa-ticket"></i></a>
+            </div>
+            <div class="ingressos-image">
+                <i class="fa-solid fa-qrcode"></i>
+            </div>
+        </section>
+
+        <!-- ==================== LOCAL ==================== -->
+        <section id="local" class="section">
+            <h2 class="section-title reveal">Local do Evento</h2>
+            <div class="local-mapa glass-card reveal">
+                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59253.77843494294!2d-45.49969666943868!3d-22.42436848245585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cb704643536a7b%3A0x44237264491746e4!2sPra%C3%A7a%20Wenceslau%20Braz%20-%20Centro%2C%20Itajub%C3%A1%20-%20MG%2C%2037500-030!5e0!3m2!1spt-BR!2sbr!4v1672852271836!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==================== FOOTER (COM CRÉDITO) ==================== -->
+    <footer id="footer">
+        <div class="container">
+            <p>Siga a gente e fique por dentro de tudo!</p>
+            <div class="social-links">
+                <a href="https://www.instagram.com/paracetanight" target="_blank" title="Instagram ParacetaNight"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.instagram.com/paracetamal.rep" target="_blank" title="Instagram República Paracetamal"><i class="fa-solid fa-house-user"></i></a>
+            </div>
+            <p class="copyright">© 2025 ParacetaNight. Todos os direitos reservados.</p>
+            <p class="dev-credit">Desenvolvido por <a href="https://www.instagram.com/jordanlvs" target="_blank">@jordanlvs <i class="fa-solid fa-circle-check verified-badge"></i></a></p>
+        </div>
+    </footer>
+    
+</body>
+</html>
