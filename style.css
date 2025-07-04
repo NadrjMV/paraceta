@@ -1,0 +1,375 @@
+/* --- RESET E VARIÁVEIS GLOBAIS (Design ParacetaNight) --- */
+:root {
+    --dark-bg: #030413;
+    --glass-bg: rgba(10, 25, 50, 0.4);
+    --glass-border: rgba(0, 122, 255, 0.3);
+    --neon-blue: #007AFF;
+    --azul-verificado: #007AFF;
+
+    --text-light: #F5F5F7;
+    --text-muted: #a0a0a0;
+
+    --font-display: 'Teko', sans-serif;
+    --font-text: 'Poppins', sans-serif;
+
+    --header-height: 5.5rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-text);
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+    overflow-x: hidden;
+    position: relative;
+}
+
+a {
+    text-decoration: none !important;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- FUNDO COM LUA CHEIA --- */
+.background-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: var(--dark-bg);
+}
+
+.moon {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    width: 300px;
+    height: 300px;
+    background: url('https://png.pngtree.com/png-clipart/20231204/original/pngtree-full-moon-fullmoon-photo-png-image_13764750.png') no-repeat center center/contain;
+    opacity: 0.5;
+    filter: blur(2px);
+}
+
+/* --- ESTILOS GERAIS --- */
+.container {
+    max-width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 1.5rem;
+}
+
+main.container > section {
+    margin-bottom: 6rem;
+}
+
+.section-title {
+    font-family: var(--font-display);
+    font-size: 3.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 3rem;
+    letter-spacing: 1px;
+    color: var(--neon-blue);
+}
+
+/* --- EFEITO GLASSMORPHISM --- */
+.glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--glass-border);
+    border-radius: 24px;
+    padding: 2.5rem;
+    box-shadow: 0 0 40px rgba(0, 122, 255, 0.1);
+}
+
+/* --- HEADER --- */
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    transition: background-color 0.3s;
+}
+
+#header.scrolled {
+    background-color: rgba(3, 4, 19, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--glass-border);
+}
+
+#header nav {
+    height: var(--header-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 45px;
+}
+
+.menu {
+    display: flex;
+    gap: 2.5rem;
+}
+
+/* --- HERO SECTION (ESTILO CORRIGIDO) --- */
+.hero {
+    text-align: center;
+    padding-top: calc(var(--header-height) + 4rem);
+    padding-bottom: 4rem;
+}
+
+.hero-title-container {
+    margin-bottom: 1rem;
+}
+
+.main-title {
+    font-family: var(--font-display);
+    font-size: 6rem; /* Tamanho gigante para impacto */
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 2px;
+    color: var(--text-light);
+    text-shadow: 0 0 15px rgba(0, 122, 255, 0.5);
+}
+
+.edition-tag {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--neon-blue);
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.slogan {
+    font-family: var(--font-text);
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 2.5rem;
+    color: var(--text-muted);
+}
+
+/* --- COUNTDOWN TIMER --- */
+.countdown-timer {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+.time-block {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    padding: 1rem 1.5rem;
+    border-radius: 16px;
+    min-width: 100px;
+}
+.time-block span {
+    font-family: var(--font-display);
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--neon-blue);
+}
+.time-block p {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-muted);
+}
+
+.event-info {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    font-weight: 600;
+}
+.event-info span {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.event-info i {
+    color: var(--neon-blue);
+}
+
+/* --- LINE-UP --- */
+.lineup-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+.artist-card {
+    padding: 0;
+    overflow: hidden;
+    text-align: center;
+}
+.artist-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 16px;
+    filter: grayscale(0.5);
+    transition: filter 0.3s, transform 0.3s;
+}
+.artist-card:hover img {
+    filter: grayscale(0);
+    transform: scale(1.05);
+}
+.artist-card h3 {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    margin-top: 1rem;
+    letter-spacing: 1px;
+}
+.artist-card p {
+    color: var(--text-muted);
+    padding-bottom: 1.5rem;
+}
+
+/* --- INGRESSOS --- */
+.ingressos-wrapper {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 3rem;
+}
+.ingressos-text h2 {
+    font-family: var(--font-display);
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+}
+.ingressos-text p {
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    max-width: 500px;
+}
+.ingressos-image i {
+    font-size: 8rem;
+    color: var(--neon-blue);
+    opacity: 0.8;
+}
+
+/* --- LOCAL --- */
+.local-mapa {
+    padding: 1rem;
+}
+.local-mapa iframe {
+    width: 100%;
+    height: 450px;
+    border-radius: 16px;
+    filter: invert(1) grayscale(1) contrast(0.8);
+}
+
+/* --- FOOTER --- */
+#footer {
+    text-align: center;
+    padding: 4rem 0;
+    border-top: 1px solid var(--glass-border);
+}
+#footer p {
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+}
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+.copyright {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem !important;
+}
+.dev-credit {
+    font-size: 0.9rem;
+    margin-bottom: 0 !important;
+}
+.dev-credit a {
+    color: var(--text-light);
+    font-weight: 600;
+}
+.verified-badge {
+    color: var(--azul-verificado);
+    font-size: 0.9em;
+    margin-left: 4px;
+}
+
+/* --- ANIMAÇÕES --- */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.6s ease-out;
+}
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- RESPONSIVIDADE --- */
+@media (max-width: 992px) {
+    .lineup-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+    }
+    .main-title {
+        font-size: 4rem;
+    }
+    .slogan, .section-title {
+        font-size: 2.5rem;
+    }
+    .countdown-timer {
+        gap: 0.5rem;
+    }
+    .time-block {
+        padding: 0.5rem;
+        min-width: 70px;
+    }
+    .time-block span {
+        font-size: 2.5rem;
+    }
+    .lineup-grid {
+        grid-template-columns: 1fr;
+    }
+    .ingressos-wrapper {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    .ingressos-text p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .ingressos-image {
+        display: none;
+    }
+}
